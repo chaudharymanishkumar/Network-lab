@@ -2,8 +2,9 @@ import socket
 import sys
 from thread import *
 server=socket.socket()
-server.bind(('',4444))
-list_of_clients=[]
+port=4444  # set port no available in your system
+server.bind(('',port))
+list_of_clients=[]   #to maintain list of client
 server.listen(100)
 def clientthread(connection,addr):
 	connection.send("Welcome to chat room")
