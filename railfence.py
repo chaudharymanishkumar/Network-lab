@@ -1,3 +1,5 @@
+#Railfence Transposition cipher  here simple railfence technique has been implemented.
+#MKChaudhary 
 def railfence(plainText):
 	plainText = plainText.lower()
 	cipherText = ""
