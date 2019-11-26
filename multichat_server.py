@@ -1,3 +1,6 @@
+#Multi chat server
+#focus is on client to client communiaction
+#MkChaudhary
 import socket
 import sys
 from thread import *
