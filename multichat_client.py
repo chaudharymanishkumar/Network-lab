@@ -1,10 +1,14 @@
+#Multi chat client program
+#focus is on client to client communication
+#MkChaudhary
 import socket
 import sys
 import select
 client=socket.socket()
-client.connect(('127.0.0.1',4444))
+Port=4444   # set port according to available port no in ur system 
+client.connect(('127.0.0.1',port))
 while True:
-	sockets_list=[sys.stdin,client]
+	sockets_list=[sys.stdin,client]    # creating a list of possible input stream
 	read_socket,write_socket,error_socket=select.select(sockets_list,[],[])
 	for sock in read_socket:
 		if sock == client:
