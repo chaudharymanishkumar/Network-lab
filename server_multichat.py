@@ -1,4 +1,6 @@
 #multichat @server
+#focus on server to client communication.Here client to client communication is not possible
+#MKChaudhary
 import socket 
 import sys 
 from thread import *
