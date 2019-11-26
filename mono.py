@@ -1,3 +1,5 @@
+#Mono Alphabatic substitution cipher
+#MkChaudhary
 monoalpha_cipher = {
     'a': 'm',
     'b': 'n',
