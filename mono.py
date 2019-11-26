@@ -1,5 +1,3 @@
-#Mono Alphabatic substitution cipher
-#MkChaudhary
 monoalpha_cipher = {
     'a': 'm',
     'b': 'n',
@@ -29,13 +27,23 @@ monoalpha_cipher = {
     'z': 'q',
     ' ': ' ',
 }
-inverse_monoalpha_cipher = {}
-for key, value in monoalpha_cipher.iteritems():
-    inverse_monoalpha_cipher[value] = key
-message = raw_input("Enter the text:-")
+def encryption(message):
+	encrypted_message=[]
+	for letter in message:
+		encrypted_message.append(monoalpha_cipher.get(letter,letter))
+	return ''.join(encrypted_message)
 
-encrypted_message = []
-for letter in message:
-    encrypted_message.append(monoalpha_cipher.get(letter, letter))
-print(''.join(encrypted_message))
+def decryption(message):
+	decrypted_message=[]
+	inverse_monoalpha_cipher={}
+	for key,value in monoalpha_cipher.iteritems():
+		inverse_monoalpha_cipher[value]=key
+	for letter in message:
+		decrypted_message.append(inverse_monoalpha_cipher.get(letter,letter))
+	return ''.join(decrypted_message)
+
+message = raw_input("Enter the text:-")
+en_data=encryption(message)
+print en_data
+print decryption(en_data)
 
