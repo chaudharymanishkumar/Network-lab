@@ -1,3 +1,6 @@
+#LZW compression and Decompression
+#MKChaudhary
+#26nov'19
 print("encoding")
 string=raw_input("enter string to compress:-")
 codes = dict([(chr(x), x) for x in range(256)])
@@ -34,6 +37,14 @@ print("".join(str(compressed_data)))
 print(decompressed_string)
 
 
-
-
-#string="ababbabcababba"
+'''Program Execution
+HP-Pavilion-Laptop-15-cc1xx:~/Desktop/cn$ python lzw.py 
+encoding
+enter string to compress:-ababbabcababba
+compressed string is:-
+[97, 98, 257, 258, 98, 99, 257, 259, 97]
+decoding
+received string is:-
+[97, 98, 257, 258, 98, 99, 257, 259, 97]
+ababbabcababba
+'''
