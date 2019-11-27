@@ -1,3 +1,6 @@
+#CRC receiver 
+#Server in server-client model
+#MKChaudhary
 import socket
 def xor(a,b):
 	result=[]
@@ -58,3 +61,15 @@ while True:
 		print "server closing"
 		c.close()
 		break
+
+		
+'''Program Execution
+HP-Pavilion-Laptop-15-cc1xx:~/Desktop/cn$ python crc_receiver.py 
+Socket successfully created
+socket binded to 1234
+socket is listening
+('Got connection from', ('127.0.0.1', 44630))
+110110111000011101110110100111100111101000100
+Enter key: 1001
+Remainder after decoding is->000
+'''
