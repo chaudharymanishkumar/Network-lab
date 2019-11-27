@@ -1,3 +1,6 @@
+#CRC sender 
+#Client in server-client model
+#MKChaudhary
 import socket
 def xor(a,b):
 	result=[]
@@ -44,3 +47,11 @@ s.sendall(ans)
 print s.recv(1024) 
 s.close() 
 
+'''Program Execution
+HP-Pavilion-Laptop-15-cc1xx:~/Desktop/cn$ python crc_sender.py 
+Enter data you want to send->manish
+110110111000011101110110100111100111101000
+Enter key: 1001
+110110111000011101110110100111100111101000100
+THANK you Data ->110110111000011101110110100111100111101000100 Received No error FOUND
+'''
