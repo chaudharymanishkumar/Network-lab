@@ -1,6 +1,8 @@
-#Railfence Transposition cipher  here simple railfence technique has been implemented.
-#MKChaudhary 
-def railfence(plainText):
+#Railfence Encryption and decryption for single rail.
+#MkChaudhary
+#27Nov'19
+import math
+def railfence_encrypt(plainText):
 	plainText = plainText.lower()
 	cipherText = ""
 	rail1 = ""
@@ -13,5 +15,24 @@ def railfence(plainText):
 
 	cipherText = rail1 + rail2
 	return cipherText
+
+
+def railfence_decrypt(cipher):
+	mid=int(math.ceil(len(cipher)/2))
+	plaintext=""
+	for i in range(mid):
+		plaintext+=cipher[i]
+		plaintext+=cipher[mid+i]
+	return plaintext
+
 data=raw_input("Enter message:")
-print(railfence(data))
+cipher=railfence_encrypt(data)
+print "Encryted Cipher:-"+cipher
+print "Decrypted Data:- "+railfence_decrypt(cipher) 
+
+
+''' output- 
+HP-Pavilion-Laptop-15-cc1xx:~/Desktop/cn$ python railfence.py 
+Enter message:manish
+Encryted Cipher:-mnsaih
+Decrypted Data:- manish'''
